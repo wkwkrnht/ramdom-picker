@@ -2,7 +2,7 @@ window.onload = function () {
     var limit = 36;
     var specialNumbers = [];
 
-    new Vue(
+    var vm = new Vue(
         {
             el: '#specialNumber',
             data: {
@@ -37,7 +37,9 @@ window.onload = function () {
                     }
                 }
             }
-        },
+        }
+    )
+    var vm1 = new Vue(
         {
             el: '#setLimit',
             data: {
@@ -60,7 +62,10 @@ window.onload = function () {
                     }
                 }
             }
-        },
+        }
+    )
+    //var vm2 = new Vue()
+    var vm3 = new Vue(
         {
             el: '#result',
             data: {
