@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//unpkg.com/vue"></script>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Ramdom Picker</h1>
+            </header>
+            <section id="setLimit">
+                <h2>Set Limit</h2>
+                <input v-model="limit" placeholder="Set Limit" v-on:click="loadLimit">
+                <button v-on:click="setLimit">X</button>
+            </section>
+            <section id="specialNumber">
+                <h2>Special Number</h2>
+                <input type="checkbox" id="2" value="2" v-on:click="specialNumber" v-bind:value="2">
+                <label for="2">2</label>
+                <input type="checkbox" id="26" value="26" v-on:click="specialNumber" v-bind:value="26">
+                <label for="26">26</label>
+            </div>
+            <section id="result">
+                {{ result }}
+            </section>
+        </main>
+    </body>
+</html>
