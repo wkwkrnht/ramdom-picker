@@ -16,6 +16,7 @@
                 <input v-model="limit" placeholder="Set Limit" v-on:click="loadLimit">
                 <button v-on:click="setLimit">submit</button>
             </section>
+            <button id="pick" v-on:click="picking">submit</button>
             <section id="specialNumber">
                 <h2>Special Number</h2>
                 <input type="checkbox" id="2" value="2" v-on:click="specialNumber" v-bind:value="2">

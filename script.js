@@ -1,39 +1,40 @@
 window.onload = function () {
     var limit = 36;
-    var specialNumbers = [];
+    var SpecialNumbers = [];
+    var source = [];
 
     var vm = new Vue(
         {
-            el: '#specialNumber',
+            el: '#SpecialNumber',
             data: {
-                specialNumber: ''
+                SpecialNumber: ''
             },
             methods: {
                 specialNumber: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        specialNumbers = localStorage.setItem('specialNumber');
-                        specialNumbers = window.localStorage.setItem('specialNumber');
-                        specialNumbers = localStorage.specialNumber
+                        SpecialNumbers = localStorage.setItem('SpecialNumber');
+                        SpecialNumbers = window.localStorage.setItem('SpecialNumber');
+                        SpecialNumbers = localStorage.SpecialNumber
                     }
-                    var specialNumber = this.specialNumber
+                    var SpecialNumber = this.SpecialNumber
                     var id = this.id
                     if ( target === '' ) {
                         if ( id === 2 ) {
-                            specialNumbers.shift()
+                            SpecialNumbers.shift()
                         } else {
-                            specialNumbers.pop()
+                            SpecialNumbers.pop()
                         }
                     } else {
                         if ( target === 2 ) {
-                            specialNumbers.unshift(specialNumber)
+                            SpecialNumbers.unshift(SpecialNumber)
                         } else {
-                            specialNumbers.push(specialNumber)
+                            SpecialNumbers.push(SpecialNumber)
                         }
                     }
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        localStorage.setItem('specialNumber', specialNumbers);
-                        window.localStorage.setItem('specialNumber', specialNumbers);
-                        localStorage.specialNumber = specialNumbers;
+                        localStorage.setItem('SpecialNumber', SpecialNumbers);
+                        window.localStorage.setItem('SpecialNumber', SpecialNumbers);
+                        localStorage.SpecialNumber = SpecialNumbers;
                     }
                 }
             }
@@ -64,12 +65,24 @@ window.onload = function () {
             }
         }
     )
-    //var vm2 = new Vue()
+    var vm2 = new Vue(
+        {
+            el: '#pick',
+            methods: {
+                picking: function (){
+                    for ( i = 0, i < wm.limit, i++ ) {
+                        source.push(i)
+                    }
+                    result = Math.floor(Math.random() * source.length)
+                }
+            }
+        }
+    )
     var vm3 = new Vue(
         {
             el: '#result',
             data: {
-                result: '2'
+                result: vm2.result
             }
         }
     )
