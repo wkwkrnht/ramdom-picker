@@ -70,10 +70,12 @@ window.onload = function () {
             el: '#pick',
             methods: {
                 picking: function (){
+                    var number
                     for ( i = 0; i < vm.limit; i++ ) {
                         source.push(i)
                     }
-                    result = Math.floor(Math.random() * source.length)
+                    number = Math.floor(Math.random() * source.length)
+                    result = source[number]
                 }
             }
         }
