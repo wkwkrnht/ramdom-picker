@@ -50,7 +50,7 @@ window.onload = function () {
                         limit = window.localStorage.setItem('limit');
                         limit = localStorage.specialNumber
                     }
-                }
+                },
                 setLimit: function () {
                     limit = this.limit
                     if(('localStorage' in window) && (window.localStorage !== null)) {
@@ -68,4 +68,4 @@ window.onload = function () {
             }
         }
     )
-}
+};

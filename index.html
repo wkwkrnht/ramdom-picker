@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset=utf-8>
+        <title>Ramdom Picker</title>
         <script src="//unpkg.com/vue"></script>
         <script src="./script.js"></script>
     </head>
@@ -12,7 +14,7 @@
             <section id="setLimit">
                 <h2>Set Limit</h2>
                 <input v-model="limit" placeholder="Set Limit" v-on:click="loadLimit">
-                <button v-on:click="setLimit">X</button>
+                <button v-on:click="setLimit">submit</button>
             </section>
             <section id="specialNumber">
                 <h2>Special Number</h2>
