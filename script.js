@@ -39,7 +39,7 @@ window.onload = function () {
                 }
             }
         }
-    )
+    );
     var vm1 = new Vue(
         {
             el: '#setLimit',
@@ -64,20 +64,20 @@ window.onload = function () {
                 }
             }
         }
-    )
+    );
     var vm2 = new Vue(
         {
             el: '#pick',
             methods: {
                 picking: function (){
-                    for ( i = 0; i < wm.limit; i++ ) {
+                    for ( i = 0; i < vm.limit; i++ ) {
                         source.push(i)
                     }
                     result = Math.floor(Math.random() * source.length)
                 }
             }
         }
-    )
+    );
     var vm3 = new Vue(
         {
             el: '#result',
@@ -85,5 +85,5 @@ window.onload = function () {
                 result: vm2.result
             }
         }
-    )
+    );
 };
