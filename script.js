@@ -3,13 +3,26 @@ window.onload = function () {
     var SpecialNumbers = [];
     var source = [];
 
-    var vm = new Vue(
+    var app = new Vue(
         {
-            el: '#SpecialNumber',
+            el: '#pick',
             data: {
-                SpecialNumber: ''
+                SpecialNumber: '',
+                limit: '36',
+                result: "Let's pick!"
             },
             methods: {
+                loadLimit: function () {
+                    if(('localStorage' in window) && (window.localStorage !== null)) {
+                        limit = localStorage.getItem('limit');
+                    }
+                },
+                setLimit: function () {
+                    limit = this.limit
+                    if(('localStorage' in window) && (window.localStorage !== null)) {
+                        localStorage.setItem('specialNumber', limit);
+                    }
+                },
                 specialNumber: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         SpecialNumbers = localStorage.getItem('SpecialNumber');
@@ -32,38 +45,7 @@ window.onload = function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('SpecialNumber', SpecialNumbers);
                     }
-                }
-            }
-        }
-    );
-    var vm1 = new Vue(
-        {
-            el: '#setLimit',
-            data: {
-                limit: '36'
-            },
-            methods: {
-                loadLimit: function () {
-                    if(('localStorage' in window) && (window.localStorage !== null)) {
-                        limit = localStorage.getItem('limit');
-                    }
                 },
-                setLimit: function () {
-                    limit = this.limit
-                    if(('localStorage' in window) && (window.localStorage !== null)) {
-                        localStorage.setItem('specialNumber', limit);
-                    }
-                }
-            }
-        }
-    );
-    var vm2 = new Vue(
-        {
-            el: '#pick',
-            data: {
-                result: "Let's pick!"
-            },
-            methods: {
                 picking: function (){
                     var number
                     for ( i = 0; i < vm.limit; i++ ) {
