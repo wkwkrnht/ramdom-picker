@@ -65,19 +65,19 @@ button:-moz-focusring,[type="submit"]:-moz-focusring{
     outline:1px dotted ButtonText;
 }
 .limit button{
-    border-color:red;
-    color:red;
+    border-color:#f44336;
+    color:#f44336;
 }
 .limit button:hover{
-    background-color:red;
+    background-color:#f44336;
     color:#fff;
 }
 .number button{
-    border-color:yellow;
-    color:yellow;
+    border-color:#ffeb3b;
+    color:#ffeb3b;
 }
 .number button:hover{
-    background-color:yellow;
+    background-color:#ffeb3b;
     color:#fff;
 }
 .do button{
