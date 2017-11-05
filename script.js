@@ -25,10 +25,11 @@ window.onload = function () {
                 },
                 specialNumber: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        SpecialNumbers = localStorage.getItem('SpecialNumber');
+                        this.SpecialNumbers = localStorage.getItem('SpecialNumber');
                     }
+
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        localStorage.setItem('SpecialNumber', SpecialNumbers);
+                        localStorage.setItem('SpecialNumber', this.SpecialNumbers);
                     }
                 },
                 picking: function (){
@@ -39,7 +40,7 @@ window.onload = function () {
                     }
                     number = Math.floor(Math.random() * source.length)
                     this.result = source[number] + 1
-                    if ( SpecialNumbers.indexOf(result) === -1 ) {
+                    if ( this.SpecialNumbers.indexOf(result) === -1 ) {
                         target = result - 1
                         length = limit + 1
                         source.splice(length, target)
