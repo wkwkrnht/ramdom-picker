@@ -7,8 +7,8 @@ window.onload = function () {
         {
             el: '#pick',
             data: {
-                SpecialNumber: '',
-                limit: '36',
+                SpecialNumber: 0,
+                limit: 36,
                 result: "Let's pick!"
             },
             methods: {
@@ -53,6 +53,7 @@ window.onload = function () {
                     }
                     number = Math.floor(Math.random() * source.length)
                     result = source[number]
+                    console.log(result)
                 }
             }
         }
