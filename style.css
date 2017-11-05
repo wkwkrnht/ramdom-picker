@@ -31,11 +31,10 @@ h1{
     font-size:2em;
     margin:.67em 0;
     text-align:center;
-    vertical-align:center;
 }
 
 main{
-    padding-top:10%;
+    padding-top:4%;
 }
 
 section{
@@ -50,6 +49,8 @@ section{
 
 button{
     -webkit-appearance:button;
+    background-color:#fff;
+    border:1px solid;
     display:inline-block;
     margin-left:1em;
     text-transform:none;
@@ -60,4 +61,28 @@ button::-moz-focus-inner,[type="submit"]::-moz-focus-inner{
 }
 button:-moz-focusring,[type="submit"]:-moz-focusring{
     outline:1px dotted ButtonText;
+}
+.limit button{
+    border-color:red;
+    color:red;
+}
+.limit button:hover{
+    background-color:red;
+    color:#fff;
+}
+.number button{
+    border-color:yellow;
+    color:yellow;
+}
+.number button:hover{
+    background-color:yellow;
+    color:#fff;
+}
+.do button{
+    border-color:#03a9f4;
+    color:#03a9f4;
+}
+.do button:hover{
+    background-color:#03a9f4;
+    color:#fff;
 }
