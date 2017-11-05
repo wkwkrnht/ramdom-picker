@@ -48,7 +48,7 @@ window.onload = function () {
                 },
                 picking: function (){
                     var number
-                    for ( i = 0; i < vm.limit; i++ ) {
+                    for ( i = 0; i < limit; i++ ) {
                         source.push(i)
                     }
                     number = Math.floor(Math.random() * source.length)
