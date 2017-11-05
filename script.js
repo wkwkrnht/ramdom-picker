@@ -27,7 +27,6 @@ window.onload = function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('SpecialNumbers', this.SpecialNumbers);
                     }
-                    console.log(this.SpecialNumbers)
                 },
                 picking: function (){
                     var limit, number, target, length
@@ -37,7 +36,7 @@ window.onload = function () {
                     }
                     number = Math.floor(Math.random() * source.length)
                     this.result = source[number] + 1
-                    if ( this.SpecialNumbers.indexOf(this.result) === -1 ) {
+                    if ( this.SpecialNumbers.indexOf(this.result) == -1 ) {
                         target = this.result - 1
                         length = limit + 1
                         source.splice(length, target)

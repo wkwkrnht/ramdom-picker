@@ -2,7 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width initial-scale=1">
         <title>Ramdom Picker</title>
+        <link rel="stylesheet" href="./style.css"></link>
         <script src="//unpkg.com/vue"></script>
         <script src="./script.js"></script>
     </head>
@@ -11,12 +15,12 @@
             <h1>Ramdom Picker</h1>
         </header>
         <main id="pick">
-            <section>
+            <section class="limit">
                 <h2>Set Limit</h2>
                 <input placeholder="Set Limit" v-model="limit">
                 <button v-on:click="setLimit">submit</button>
             </section>
-            <section>
+            <section class="number">
                 <h2>Special Number</h2>
                 <input type="checkbox" id="2" value="2" v-model="SpecialNumbers">
                 <label for="2">2</label>
@@ -24,8 +28,8 @@
                 <label for="26">26</label>
                 <button v-on:click="setSpecialNumber">submit</button>
             </section>
-            <section>
-                <div>{{ result }}</div>
+            <section class="do">
+                <span>{{ result }}</span>
                 <button v-on:click="picking">pick</button>
             </section>
         </main>
