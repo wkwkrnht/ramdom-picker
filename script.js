@@ -1,6 +1,5 @@
 window.onload = function () {
     var limit = 36;
-    var SpecialNumbers = [];
     var source = [];
 
     var app = new Vue(
@@ -9,6 +8,7 @@ window.onload = function () {
             data: {
                 SpecialNumber: 0,
                 limit: 36,
+                SpecialNumbers: [],
                 result: "Let's pick!"
             },
             methods: {
@@ -27,38 +27,21 @@ window.onload = function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         SpecialNumbers = localStorage.getItem('SpecialNumber');
                     }
-                    var target
-                    var SpecialNumber = this.SpecialNumber
-                    var id = this.id
-                    if ( target === '' ) {
-                        if ( id === 2 ) {
-                            SpecialNumbers.shift()
-                        } else {
-                            SpecialNumbers.pop()
-                        }
-                    } else {
-                        if ( target === 2 ) {
-                            SpecialNumbers.unshift(SpecialNumber)
-                        } else {
-                            SpecialNumbers.push(SpecialNumber)
-                        }
-                    }
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('SpecialNumber', SpecialNumbers);
                     }
                 },
                 picking: function (){
-                    var number, target, length
-                    for ( i = 0; i < this.limit; i++ ) {
+                    var limit, number, target, length
+                    limit = this.limit
+                    for ( i = 0; i < limit; i++ ) {
                         source.push(i)
                     }
                     number = Math.floor(Math.random() * source.length)
-                    result = source[number] + 1
-                    this.result = result
-                    console.log(this.result)
+                    this.result = source[number] + 1
                     if ( SpecialNumbers.indexOf(result) === -1 ) {
                         target = result - 1
-                        length = this.limit + 1
+                        length = limit + 1
                         source.splice(length, target)
                     }
                 }

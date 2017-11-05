@@ -18,11 +18,11 @@
             </section>
             <section>
                 <h2>Special Number</h2>
-                <input type="checkbox" id="2" value="2" v-on:click="specialNumber" v-bind:value="2">
+                <input type="checkbox" id="2" value="2" v-model="SpecialNumbers" v-on:click="specialNumber">
                 <label for="2">2</label>
-                <input type="checkbox" id="26" value="26" v-on:click="specialNumber" v-bind:value="26">
+                <input type="checkbox" id="26" value="26" v-model="SpecialNumbers" v-on:click="specialNumber">
                 <label for="26">26</label>
-            </div>
+            </section>
             <section>
                 <div>{{ result }}</div>
                 <button v-on:click="picking">pick</button>
