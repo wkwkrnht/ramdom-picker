@@ -53,11 +53,12 @@ window.onload = function () {
                         source.push(i)
                     }
                     number = Math.floor(Math.random() * source.length)
-                    this.result = source[number] + 1
+                    result = source[number] + 1
+                    this.result = result
                     console.log(this.result)
-                    if ( SpecialNumbers.indexOf(this.result) === -1 ) {
-                        target = this.result - 1
-                        length = this.limit - 1
+                    if ( SpecialNumbers.indexOf(result) === -1 ) {
+                        target = result - 1
+                        length = this.limit + 1
                         source.splice(length, target)
                     }
                 }
