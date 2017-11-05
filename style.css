@@ -52,8 +52,10 @@ section{
 button{
     -webkit-appearance:button;
     background-color:#fff;
-    border:1px solid;
+    border:3px solid;
     display:inline-block;
+    font-size:1.2rem;
+    font-weight:500;
     margin-left:1em;
     text-transform:none;
 }
@@ -73,18 +75,18 @@ button:-moz-focusring,[type="submit"]:-moz-focusring{
     color:#fff;
 }
 .number button{
-    border-color:#ffeb3b;
-    color:#ffeb3b;
-}
-.number button:hover{
-    background-color:#ffeb3b;
-    color:#fff;
-}
-.do button{
     border-color:#03a9f4;
     color:#03a9f4;
 }
-.do button:hover{
+.number button:hover{
     background-color:#03a9f4;
+    color:#fff;
+}
+.do button{
+    border-color:#000;
+    color:#000;
+}
+.do button:hover{
+    background-color:#000;
     color:#fff;
 }
