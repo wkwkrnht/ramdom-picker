@@ -68,6 +68,9 @@ window.onload = function () {
     var vm2 = new Vue(
         {
             el: '#pick',
+            data: {
+                result: this.result
+            },
             methods: {
                 picking: function (){
                     var number
@@ -77,14 +80,6 @@ window.onload = function () {
                     number = Math.floor(Math.random() * source.length)
                     result = source[number]
                 }
-            }
-        }
-    );
-    var vm3 = new Vue(
-        {
-            el: '#result',
-            data: {
-                result: vm2.result
             }
         }
     );
