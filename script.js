@@ -27,6 +27,7 @@ window.onload = function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('SpecialNumbers', this.SpecialNumbers);
                     }
+                    console.log(this.SpecialNumbers)
                 },
                 picking: function (){
                     var limit, number, target, length
