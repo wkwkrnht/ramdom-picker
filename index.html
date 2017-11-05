@@ -30,7 +30,7 @@
             <section class="do">
                 <h2>3.Let's pick!</h2>
                 <span>{{ result }}</span>
-                <button v-on:click="picking">pick</button>
+                <button v-on:click="picking" v-on:touchend="picking">pick</button>
             </section>
         </main>
     </body>
