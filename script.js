@@ -52,11 +52,14 @@ window.onload = function () {
                         source.push(i)
                     }
                     number = Math.floor(Math.random() * source.length)
-                    result = source[number]
+                    result = source[number] + 1
                     console.log(result)
+                    result = resut
                     return result
                 }
             }
         }
     );
 };
+
+vue.$forceUpdate();

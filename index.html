@@ -13,7 +13,7 @@
         <main id="pick">
             <section>
                 <h2>Set Limit</h2>
-                <input v-model="limit" placeholder="Set Limit" v-on:click="loadLimit">
+                <input placeholder="Set Limit" v-model="limit" v-on:click="loadLimit">
                 <button v-on:click="setLimit">submit</button>
             </section>
             <section>
@@ -24,9 +24,7 @@
                 <label for="26">26</label>
             </div>
             <section>
-                <div>
-                    {{ result }}
-                </div>
+                <div>{{ result }}</div>
                 <button v-on:click="picking">pick</button>
             </section>
         </main>
