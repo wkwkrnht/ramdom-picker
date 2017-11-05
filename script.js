@@ -12,9 +12,7 @@ window.onload = function () {
             methods: {
                 specialNumber: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        SpecialNumbers = localStorage.setItem('SpecialNumber');
-                        SpecialNumbers = window.localStorage.setItem('SpecialNumber');
-                        SpecialNumbers = localStorage.SpecialNumber
+                        SpecialNumbers = localStorage.getItem('SpecialNumber');
                     }
                     var SpecialNumber = this.SpecialNumber
                     var id = this.id
@@ -33,8 +31,6 @@ window.onload = function () {
                     }
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('SpecialNumber', SpecialNumbers);
-                        window.localStorage.setItem('SpecialNumber', SpecialNumbers);
-                        localStorage.SpecialNumber = SpecialNumbers;
                     }
                 }
             }
@@ -49,17 +45,13 @@ window.onload = function () {
             methods: {
                 loadLimit: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        limit = localStorage.setItem('limit');
-                        limit = window.localStorage.setItem('limit');
-                        limit = localStorage.specialNumber
+                        limit = localStorage.getItem('limit');
                     }
                 },
                 setLimit: function () {
                     limit = this.limit
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('specialNumber', limit);
-                        window.localStorage.setItem('specialNumber', limit);
-                        localStorage.specialNumber = limit;
                     }
                 }
             }
@@ -69,7 +61,7 @@ window.onload = function () {
         {
             el: '#pick',
             data: {
-                result: this.result
+                result: "Let's pick!"
             },
             methods: {
                 picking: function (){
