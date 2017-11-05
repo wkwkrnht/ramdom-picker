@@ -29,7 +29,7 @@ window.onload = function () {
                     }
                 },
                 picking: function (){
-                    var limit, number, target, length
+                    var limit, number, target
                     limit = this.limit
                     for ( i = 0; i < limit; i++ ) {
                         source.push(i)
@@ -39,8 +39,7 @@ window.onload = function () {
                     console.log(this.result)
                     //if ( this.SpecialNumbers.indexOf(this.result) < 0 ) {
                         target = this.result - 1
-                        length = limit + 1
-                        source.splice(length, target)
+                        source.splice(target, 1)
                     //}
                 }
             }
