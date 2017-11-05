@@ -6,9 +6,8 @@ window.onload = function () {
         {
             el: '#pick',
             data: {
-                SpecialNumber: 0,
                 limit: 36,
-                SpecialNumbers: [],
+                SpecialNumbers: '2,26',
                 result: "Let's pick!"
             },
             created: function () {
@@ -23,7 +22,7 @@ window.onload = function () {
                         localStorage.setItem('limit', this.limit);
                     }
                 },
-                setSpecialNumber: function () {
+                setSpecialNumbers: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('SpecialNumbers', this.SpecialNumbers);
                     }
@@ -31,11 +30,12 @@ window.onload = function () {
                 picking: function (){
                     var limit, number, target
                     limit = this.limit
+                    number = this.SpecialNumbers.split(',')
                     target = Math.floor(Math.random() * limit)
                     if ( source.indexOf(target) < 0) {
-                        this.result = target
+                        this.result = target + 1
                     }
-                    if ( this.SpecialNumbers.indexOf(this.result) < 0 ) {
+                    if ( number.indexOf(this.result) < 0 ) {
                         source.push(target)
                     }
                     console.log(this.result)
