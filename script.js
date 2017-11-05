@@ -11,25 +11,24 @@ window.onload = function () {
                 SpecialNumbers: [],
                 result: "Let's pick!"
             },
-            methods: {
-                loadLimit: function () {
+            created: {
+                function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        limit = localStorage.getItem('limit');
+                        this.limit = localStorage.getItem('limit');
+                        this.SpecialNumbers = localStorage.getItem('SpecialNumbers');
                     }
-                },
+                }
+            },
+            methods: {
                 setLimit: function () {
                     limit = this.limit
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         localStorage.setItem('limit', limit);
                     }
                 },
-                specialNumber: function () {
+                setSpecialNumber: function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        this.SpecialNumbers = localStorage.getItem('SpecialNumber');
-                    }
-
-                    if(('localStorage' in window) && (window.localStorage !== null)) {
-                        localStorage.setItem('SpecialNumber', this.SpecialNumbers);
+                        localStorage.setItem('SpecialNumbers', this.SpecialNumbers);
                     }
                 },
                 picking: function (){
