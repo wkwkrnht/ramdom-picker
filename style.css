@@ -23,15 +23,24 @@ header{
     background-color:#333;
     color:#fff;
     height:8%;
-    position:fixed;
+    position:absolute;
     top:0;
+}
+
+h1{
+    text-align:center;
+    vertical-align:center;
 }
 
 section{
     background-color:#fff;
     box-shadow:0 0 3vmin rgba(0,0,0,.2);
     height:12%;
-    margin:4% auto;
+    margin:4% 10%;
     padding:2% 10%;
     width:80%;
+}
+
+form > *{
+    display:inline-block;
 }
