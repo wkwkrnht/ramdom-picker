@@ -20,7 +20,7 @@ window.onload = function () {
                 setLimit: function () {
                     limit = this.limit
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        localStorage.setItem('specialNumber', limit);
+                        localStorage.setItem('limit', limit);
                     }
                 },
                 specialNumber: function () {
