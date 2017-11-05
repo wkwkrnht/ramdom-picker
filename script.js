@@ -31,12 +31,12 @@ window.onload = function () {
                 picking: function (){
                     var limit, number, target
                     limit = this.limit
+                    number = Math.floor(Math.random() * limit)
                     for ( i = 0; i < limit; i++ ) {
                         source.push(i)
                     }
-                    number = Math.floor(Math.random() * source.length)
                     this.result = source[number] + 1
-                    console.log(this.result)
+                    console.log(number + '&' + this.result)
                     //if ( this.SpecialNumbers.indexOf(this.result) < 0 ) {
                         target = this.result - 1
                         source.splice(target, 1)
