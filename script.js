@@ -27,6 +27,7 @@ window.onload = function () {
                     if(('localStorage' in window) && (window.localStorage !== null)) {
                         SpecialNumbers = localStorage.getItem('SpecialNumber');
                     }
+                    var target
                     var SpecialNumber = this.SpecialNumber
                     var id = this.id
                     if ( target === '' ) {
@@ -47,14 +48,18 @@ window.onload = function () {
                     }
                 },
                 picking: function (){
-                    var number
-                    for ( i = 0; i < limit; i++ ) {
+                    var number, target, length
+                    for ( i = 0; i < this.limit; i++ ) {
                         source.push(i)
                     }
                     number = Math.floor(Math.random() * source.length)
                     this.result = source[number] + 1
                     console.log(this.result)
-                    //return this.result
+                    if ( SpecialNumbers.indexOf(this.result) === -1 ) {
+                        target = this.result - 1
+                        length = this.limit - 1
+                        source.splice(length, target)
+                    }
                 }
             }
         }
