@@ -17,20 +17,16 @@
         <main id="pick">
             <section class="limit">
                 <h2>Set Limit</h2>
-                <form>
-                    <input placeholder="Set Limit" v-model="limit">
-                    <button v-on:click="setLimit">submit</button>
-                </form>
+                <input placeholder="Set Limit" v-model="limit">
+                <button v-on:click="setLimit">submit</button>
             </section>
             <section class="number">
                 <h2>Special Number</h2>
-                <form>
-                    <input type="checkbox" id="2" value="2" v-model="SpecialNumbers">
-                    <label for="2">2</label>
-                    <input type="checkbox" id="26" value="26" v-model="SpecialNumbers">
-                    <label for="26">26</label>
-                    <button v-on:click="setSpecialNumber">submit</button>
-                </form>
+                <input type="checkbox" id="2" value="2" v-model="SpecialNumbers">
+                <label for="2">2</label>
+                <input type="checkbox" id="26" value="26" v-model="SpecialNumbers">
+                <label for="26">26</label>
+                <button v-on:click="setSpecialNumber">submit</button>
             </section>
             <section class="do">
                 <span>{{ result }}</span>
