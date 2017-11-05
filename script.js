@@ -54,6 +54,7 @@ window.onload = function () {
                     number = Math.floor(Math.random() * source.length)
                     result = source[number]
                     console.log(result)
+                    return result
                 }
             }
         }
