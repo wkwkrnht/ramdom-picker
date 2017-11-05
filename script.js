@@ -8,7 +8,7 @@ window.onload = function () {
             data: {
                 limit: 36,
                 SpecialNumbers: '2,26',
-                result: "Let's pick!"
+                result: '00'
             },
             created: function () {
                 if(('localStorage' in window) && (window.localStorage !== null)) {

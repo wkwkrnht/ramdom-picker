@@ -16,17 +16,19 @@
         </header>
         <main id="pick">
             <section class="limit">
-                <h2>Set Limit</h2>
-                <input placeholder="Set Limit" v-model="limit">
+                <h2>1.Set Limit</h2>
+                <p>You must set ilmit number choosen. If you did not set it, limit number is "36".</p>
+                <input title="Setting - Limit" placeholder="Set Limit" v-model="limit">
                 <button v-on:click="setLimit">submit</button>
             </section>
             <section class="number">
-                <h2>Special Number</h2>
-                <p>You can set special number which may be selected more than once.</p>
-                <input placeholder="Special Numbers" v-model="SpecialNumbers">
+                <h2>2.Special Number</h2>
+                <p>You can set special number which may be selected more than once. If you write here, you must write "," as a sepalater between numbers.</p>
+                <input title="Setting - Special Numbers" placeholder="Special Numbers" v-model="SpecialNumbers">
                 <button v-on:click="setSpecialNumbers">submit</button>
             </section>
             <section class="do">
+                <h2>3.Let's pick!</h2>
                 <span>{{ result }}</span>
                 <button v-on:click="picking">pick</button>
             </section>
