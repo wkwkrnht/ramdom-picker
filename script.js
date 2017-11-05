@@ -36,7 +36,7 @@ window.onload = function () {
                     }
                     number = Math.floor(Math.random() * source.length)
                     this.result = source[number] + 1
-                    if ( this.SpecialNumbers.indexOf(result) === -1 ) {
+                    if ( this.SpecialNumbers.indexOf(this.result) === -1 ) {
                         target = result - 1
                         length = limit + 1
                         source.splice(length, target)
