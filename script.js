@@ -37,11 +37,11 @@ window.onload = function () {
                     number = Math.floor(Math.random() * source.length)
                     this.result = source[number] + 1
                     console.log(this.result)
-                    if ( this.SpecialNumbers.indexOf(this.result) < 0 ) {
+                    //if ( this.SpecialNumbers.indexOf(this.result) < 0 ) {
                         target = this.result - 1
                         length = limit + 1
                         source.splice(length, target)
-                    }
+                    //}
                 }
             }
         }
