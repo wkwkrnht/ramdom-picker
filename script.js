@@ -7,7 +7,7 @@ window.onload = function () {
             el: '#pick',
             data: {
                 limit: 36,
-                SpecialNumbers: '2,26',
+                SpecialNumbers: '',
                 result: '00'
             },
             created: function () {

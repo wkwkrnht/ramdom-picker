@@ -8,15 +8,13 @@
     -webkit-text-size-adjust:100%;
 }
 
-body{
+body,header,main{
     margin:0;
-    scroll-behavior:smooth;
     width:100%;
 }
 
-header,main{
-    margin:0;
-    width:100%;
+body{
+    scroll-behavior:smooth;
 }
 
 header{
@@ -36,7 +34,7 @@ h1{
 }
 
 main{
-    padding-top:4%;
+    padding-top:8%;
 }
 
 section{
@@ -52,7 +50,7 @@ section{
 button{
     -webkit-appearance:button;
     background-color:#fff;
-    border:3px solid;
+    border:5px solid;
     display:inline-block;
     font-size:1.2rem;
     font-weight:500;

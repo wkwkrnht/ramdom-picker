@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -11,14 +11,14 @@
         <script src="//unpkg.com/vue"></script>
         <script src="./script.js"></script>
     </head>
-    <body lang="en">
+    <body>
         <header>
             <h1>Ramdom Picker</h1>
         </header>
         <main id="pick">
             <section class="limit">
                 <h2>1.Set Limit</h2>
-                <p>You must set ilmit number choosen. If you did not set it, limit number is "36".</p>
+                <p>You must set ilmit number choosen.</p>
                 <input title="Setting - Limit" placeholder="Set Limit" v-model="limit">
                 <button v-on:click="setLimit">submit</button>
             </section>
