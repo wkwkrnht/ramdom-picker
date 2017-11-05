@@ -11,19 +11,16 @@ window.onload = function () {
                 SpecialNumbers: [],
                 result: "Let's pick!"
             },
-            created: {
-                function () {
-                    if(('localStorage' in window) && (window.localStorage !== null)) {
-                        this.limit = localStorage.getItem('limit');
-                        this.SpecialNumbers = localStorage.getItem('SpecialNumbers');
-                    }
+            created: function () {
+                if(('localStorage' in window) && (window.localStorage !== null)) {
+                    this.limit = localStorage.getItem('limit');
+                    this.SpecialNumbers = localStorage.getItem('SpecialNumbers');
                 }
             },
             methods: {
                 setLimit: function () {
-                    limit = this.limit
                     if(('localStorage' in window) && (window.localStorage !== null)) {
-                        localStorage.setItem('limit', limit);
+                        localStorage.setItem('limit', this.limit);
                     }
                 },
                 setSpecialNumber: function () {
