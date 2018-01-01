@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
+<<<<<<< HEAD
         <title>Ramdom Picker</title>
         <script src="./vue.js"></script>
+=======
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <meta name="theme-color" content="#000">
+        <title>Ramdom Picker</title>
+        <link rel="stylesheet" href="./style.css"></link>
+        <script src="//unpkg.com/vue"></script>
+>>>>>>> ec942ad599775a42f6373dd2c81650eea26cbee4
         <script src="./script.js"></script>
     </head>
     <body>
-        <main>
-            <header>
-                <h1>Ramdom Picker</h1>
-            </header>
-            <section id="setLimit">
-                <h2>Set Limit</h2>
-                <input v-model="limit" placeholder="Set Limit" v-on:click="loadLimit">
+        <header>
+            <h1>Ramdom Picker</h1>
+        </header>
+        <main id="pick">
+            <section class="limit">
+                <h2>1.Set Limit</h2>
+                <p>You must set ilmit number choosen.</p>
+                <input title="Setting - Limit" placeholder="Set Limit" v-model="limit">
                 <button v-on:click="setLimit">submit</button>
             </section>
-            <button id="pick" v-on:click="picking">submit</button>
-            <section id="SpecialNumber">
-                <h2>Special Number</h2>
-                <input type="checkbox" id="2" value="2" v-on:click="specialNumber" v-bind:value="2">
-                <label for="2">2</label>
-                <input type="checkbox" id="26" value="26" v-on:click="specialNumber" v-bind:value="26">
-                <label for="26">26</label>
-            </div>
-            <section id="result">
-                {{ result }}
+            <section class="number">
+                <h2>2.Special Number</h2>
+                <p>You can set special number which may be selected more than once. If you write here, you must write "," as a sepalater between numbers.</p>
+                <input title="Setting - Special Numbers" placeholder="Special Numbers" v-model="SpecialNumbers">
+                <button v-on:click="setSpecialNumbers">submit</button>
+            </section>
+            <section class="do">
+                <h2>3.Let's pick!</h2>
+                <span>{{ result }}</span>
+                <button v-on:click.prevent="picking" v-on:touchstart.prevent="picking">pick</button>
             </section>
         </main>
     </body>
